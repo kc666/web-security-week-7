@@ -7,42 +7,42 @@ Time spent: 12 hours spent in total
 ## Pentesting Report
 
 1. (Required) Vulnerability Name or ID: Authenticated Stored Cross-Site Scripting
-  - [ ] Summary:
+  - [X] Summary:
     - Vulnerability types: XSS
     - Tested in version: 4.2
     - Fixed in version: 4.2.3
-  - [ ] GIF Walkthrough:
+  - [X] GIF Walkthrough:
     - <img src='XSS1.gif' title='XSS1' width='' alt='' />
-  - [ ] Steps to recreate:
+  - [X] Steps to recreate:
     - Create a new post, and then put this line of code in the content <a onmouseover="alert('I got you!')">Click here</a>, lastly click to preview the webpage.
-  - [ ] Affected source code:
-    - [Link 1](https://core.trac.wordpress.org/browser/tags/version/src/source_file.php)
+  - [X] Affected source code:
+    - [Link1](https://core.trac.wordpress.org/browser/branches/4.2/src/wp-includes/class-wp-editor.php?rev=33361)
 
 
 2. (Required) Vulnerability Name or ID: User enumeration
-  - [ ] Summary:
+  - [X] Summary:
     - Vulnerability types: User enumeration
     - Tested in version: 4.2
     - Fixed in version: -
-  - [ ] GIF Walkthrough:
+  - [X] GIF Walkthrough:
     - <img src='UserEnumeration.gif' title='User Enumeration' width='' alt='' />
-  - [ ] Steps to recreate:
+  - [X] Steps to recreate:
     - Go to the WordPress login page, when you randomly type an username, notification will appear invalid username, when you type admin as username and given random password guessing, the notification will say "the password for username admin is incorrect", so we know that it's a valid username. In this way we can make guess on other valid usernames.
-  - [ ] Affected source code:
-    - [Link 1](https://core.trac.wordpress.org/browser/tags/version/src/source_file.php)
+  - [X] Affected source code:
+    - [Link 2](https://www.wpwhitesecurity.com/wordpress-security/wordpress-username-disclosure-vulnerability/)
 
 
 3. (Required) Vulnerability Name or ID: Unauthenticated Stored Cross-Site Scripting
-  - [ ] Summary:
+  - [X] Summary:
     - Vulnerability types: XSS
     - Tested in version: 4.2
     - Fixed in version: 4.1.2
-  - [ ] GIF Walkthrough:
+  - [X] GIF Walkthrough:
     - <img src='XSS2.gif' title='XSS2' width='' alt='' />
-  - [ ] Steps to recreate:
+  - [X] Steps to recreate:
     - View one of the page, and scroll down to the comment section, inset the line of code in the comment: <abbr title='website alert' onmouseover='aler(404)' style='position:fixed;top:0;left:0;width:100%;height:100%'>. Then re-visit the page. The alert will pop out.
-  - [ ] Affected source code:
-    - [Link 1](https://core.trac.wordpress.org/browser/tags/version/src/source_file.php)
+  - [X] Affected source code:
+    - [Link 3](https://cedricvb.be/post/wordpress-stored-xss-vulnerability-4-1-2/)
 
 
 ## Assets
